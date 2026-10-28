@@ -118,12 +118,14 @@ public class Exercises {
         }
 
         ListNode current = head;
-        if(min(head) == head.data) {
+        int mini = min(head);
+
+        if(mini == head.data) {
             head = head.next;
             return head;
             }
         while (current != null) {
-            if(min(head) == current.next.data) {
+            if(mini == current.next.data) {
             current.next = current.next.next;
             return head;
             }
